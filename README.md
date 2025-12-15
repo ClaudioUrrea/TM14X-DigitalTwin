@@ -1,4 +1,4 @@
-# Fatigue-Aware Real-Time Task Reallocation in Human-Robot Collaboration: A Longitudinal Digital Twin Framework with Statistical Validation and RoboDK Integration
+# Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration: Integration of RGB-D Vision, Physiological Wearables, and AI Pose Estimation with Statistical Validation
 
 [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fsystems-blue)](https://doi.org/10.3390/systems)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](https://creativecommons.org/licenses/by/4.0/)
@@ -8,7 +8,7 @@
 
 ## 📄 Paper Information
 
-**Title:** Fatigue-Aware Real-Time Task Reallocation in Human-Robot Collaboration: A Longitudinal Digital Twin Framework with Statistical Validation and RoboDK Integration
+**Title:** Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration: Integration of RGB-D Vision, Physiological Wearables, and AI Pose Estimation with Statistical Validation
 
 **Author:** Claudio Urrea  
 **Affiliation:** Electrical Engineering Department, Faculty of Engineering, University of Santiago of Chile  
@@ -209,14 +209,15 @@ This research was conducted at the University of Santiago of Chile, Electrical E
 
 ## Related Publications
 
-1. Urrea, C. (2025). "Fatigue-Aware Real-Time Task Reallocation in Human-Robot Collaboration..." *Systems*, MDPI.
+1. Urrea, C. (2026). "Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration..." *Sensors*, MDPI.
 
 ---
 
-**Keywords:** Human-Robot Collaboration, Fatigue Monitoring, Digital Twin, Task Reallocation, Industry 4.0, Ergonomics, Adaptive Systems, RoboDK Integration, Statistical Validation, Semaphore Alerts, Omron TM14X
+**Keywords:** Sensor Fusion; Multimodal Sensing; Physiological Sensors; Fatigue Monitoring;	RGB-D Computer Vision; Wearable Sensors; Human-Robot Collaboration; Digital Twin;	Heart Rate Variability; Galvanic Skin Response; MediaPipe; Real-Time Processing; Pose Estimation; Azure Kinect; Industry 4.0
+
 
 **MSC:** 93C85; 93D21; 93C40; 90C29; 90B50; 68T40; 68T05; 49J15; 93B52
 
 ---
 
-*Last updated: November 2025*
+*Last updated: December 2025*
