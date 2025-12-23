@@ -1,4 +1,4 @@
-# Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration: Integration of RGB-D Vision, Physiological Wearables, and AI Pose Estimation with Statistical Validation
+# Large-Scale Validation of Multimodal Sensor Integration for Fatigue Monitoring in Collaborative Robotics: A 1000-Episode Study
 
 [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fsystems-blue)](https://doi.org/10.3390/systems)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](https://creativecommons.org/licenses/by/4.0/)
@@ -8,14 +8,14 @@
 
 ## 📄 Paper Information
 
-**Title:** Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration: Integration of RGB-D Vision, Physiological Wearables, and AI Pose Estimation with Statistical Validation
+**Title:** Large-Scale Validation of Multimodal Sensor Integration for Fatigue Monitoring in Collaborative Robotics: A 1000-Episode Study
 
 **Author:** Claudio Urrea  
 **Affiliation:** Electrical Engineering Department, Faculty of Engineering, University of Santiago of Chile  
 **Contact:** claudio.urrea@usach.cl
 
-**Journal:** Systems (MDPI)  
-**Year:** 2025  
+**Journal:** Applied Sciences (MDPI)  
+**Year:** 2026  
 **Status:** Submitted
 
 ## Abstract
@@ -161,11 +161,11 @@ If you use this code or data in your research, please cite:
 @article{urrea2025fatigue,
   title={Fatigue-Aware Real-Time Task Reallocation in Human-Robot Collaboration: A Longitudinal Digital Twin Framework with Statistical Validation and RoboDK Integration},
   author={Urrea, Claudio},
-  journal={Systems},
+  journal={Applied Sciences},
   volume={1},
   number={1},
   pages={0},
-  year={2025},
+  year={2026},
   publisher={MDPI},
   doi={10.3390/systems}
 }
@@ -209,7 +209,7 @@ This research was conducted at the University of Santiago of Chile, Electrical E
 
 ## Related Publications
 
-1. Urrea, C. (2026). "Multimodal Sensor Fusion for Real-Time Fatigue Detection in Human-Robot Collaboration..." *Sensors*, MDPI.
+1. Urrea, C. (2026). "Large-Scale Validation of Multimodal Sensor Integration for Fatigue Monitoring in Collaborative Robotics: A 1000-Episode Study" *Applied Sciences*, MDPI.
 
 ---
 
