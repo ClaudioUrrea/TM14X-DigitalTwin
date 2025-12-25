@@ -121,7 +121,6 @@ t=45 min   | 68.04%       | 1.51%   | 🔴 RED          | 1000
 
 ### Statistical Validation
 
-Statistical Validation
 **Temporal Effects Analysis**
 
 - Friedman Test (non-parametric repeated measures): χ²(3) = 3000.0, p < 0.001.
