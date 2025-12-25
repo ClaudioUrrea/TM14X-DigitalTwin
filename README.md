@@ -24,45 +24,44 @@ Sensor fusion for fatigue monitoring is hard. Depth cameras run at 30 Hz, ECG va
 
 ### Key Features
 
-Key Features
-Sensor Fusion Performance
+**Sensor Fusion Performance**
 
-94.2% classification accuracy using Random Forest fusion of 28 features (16 physiological + 12 vision-derived)
-+17.8 percentage point improvement over best single-sensor baseline (HR only: 76.4%)
-Feature importance breakdown: Physiological sensors 58%, vision sensors 27%, contextual features 15%
+- 94.2% classification accuracy using Random Forest fusion of 28 features (16 physiological + 12 vision-derived).
+- +17.8 percentage point improvement over best single-sensor baseline (HR only: 76.4%).
+- Feature importance breakdown: Physiological sensors 58%, vision sensors 27%, contextual features 15%.
 
-Real-Time Safety Control
+**Real-Time Safety Control**
 
-99.30% collision-free operation across 1,000 episodes (approaching ISO/TS 15066:2016 target of 99.85%)
-200ms total latency: sensor read (50ms) + sync (30ms) + feature extraction (80ms) + RF inference (20ms) + commands (20ms)
-Tricolor semaphore alert system: Green ≤30%, Orange 31-35%, Red >35% fatigue thresholds
-Dynamic task reallocation triggers when fused fatigue estimate exceeds 35%
+- 99.30% collision-free operation across 1,000 episodes (approaching ISO/TS 15066:2016 target of 99.85%).
+- 200ms total latency: sensor read (50ms) + sync (30ms) + feature extraction (80ms) + RF inference (20ms) + commands (20ms).
+- Tricolor semaphore alert system: Green ≤30%, Orange 31-35%, Red >35% fatigue thresholds.
+- Dynamic task reallocation triggers when fused fatigue estimate exceeds 35%.
 
-Multimodal Sensor Integration
+**Multimodal Sensor Integration**
 
-Azure Kinect RGB-D: 1920×1080 + 640×576 depth, 0.5-5m range, 30 Hz
-Polar H10 ECG: HR/HRV metrics via Bluetooth LE, ~1 Hz
-Grove GSR: 12-bit ADC skin conductance, 1 Hz
-MediaPipe Pose: 33 landmarks, 30 fps skeletal tracking
+- Azure Kinect RGB-D: 1920×1080 + 640×576 depth, 0.5-5m range, 30 Hz.
+- Polar H10 ECG: HR/HRV metrics via Bluetooth LE, ~1 Hz.
+- Grove GSR: 12-bit ADC skin conductance, 1 Hz.
+- MediaPipe Pose: 33 landmarks, 30 fps skeletal tracking.
 
-Statistical Validation at Scale
+**Statistical Validation at Scale**
 
-1,000 simulated episodes with perfect ground truth from Digital Twin (vs. typical HRC studies: n=10-50)
-Temporal fatigue progression: 15% baseline → 52% at 45 minutes (Friedman χ²(3)=3000.0, p<0.001)
-Large effect sizes: Cohen's d ranging 1.18 to 2.34 across time bins
-Fatigue-skill paradox: Direct ρ=0.94 (p<0.001), partial ρ=0.12 (p=0.74, n.s.) controlling for time
+- 1,000 simulated episodes with perfect ground truth from Digital Twin (vs. typical HRC studies: n=10-50).
+- Temporal fatigue progression: 15% baseline → 52% at 45 minutes (Friedman χ²(3)=3000.0, p<0.001).
+- Large effect sizes: Cohen's d ranging 1.18 to 2.34 across time bins.
+- Fatigue-skill paradox: Direct ρ=0.94 (p<0.001), partial ρ=0.12 (p=0.74, n.s.) controlling for time.
 
-Intervention Effectiveness
+**Intervention Effectiveness**
 
-Post-reallocation physiological recovery: HR -8.3 bpm, HRV RMSSD +12.1 ms, GSR -0.9 µS (all p<0.001, Cohen's d=0.54-1.02)
-67.2% of episodes triggered reallocation (mean: 3.2 reallocations per episode)
-30-35% reduction in musculoskeletal injury risk estimated through sensor-informed task allocation
+- Post-reallocation physiological recovery: HR -8.3 bpm, HRV RMSSD +12.1 ms, GSR -0.9 µS (all p<0.001, Cohen's d=0.54-1.02).
+- 67.2% of episodes triggered reallocation (mean: 3.2 reallocations per episode).
+- 30-35% reduction in musculoskeletal injury risk estimated through sensor-informed task allocation.
 
-Digital Twin Integration
+**Digital Twin Integration**
 
-RoboDK simulation with Omron TM14X robot models
-MATLAB interface for trajectory generation and control
-Virtual testing before physical deployment with synthetic sensor noise validation
+- RoboDK simulation with Omron TM14X robot models.
+- MATLAB interface for trajectory generation and control.
+- Virtual testing before physical deployment with synthetic sensor noise validation.
 
 
 ## Quick Start
@@ -123,46 +122,46 @@ t=45 min   | 68.04%       | 1.51%   | 🔴 RED          | 1000
 ### Statistical Validation
 
 Statistical Validation
-Temporal Effects Analysis
+**Temporal Effects Analysis**
 
-Friedman Test (non-parametric repeated measures): χ²(3) = 3000.0, p < 0.001
-Fatigue progression: 15.2% baseline → 51.9% at 45 min (exponential accumulation, ρ = 0.99, p < 0.001)
-Effect sizes (Cohen's d): 1.18 to 2.34 across time bins (very large effects)
-Significance threshold: α = 0.001 (Bonferroni-corrected for multiple comparisons)
+- Friedman Test (non-parametric repeated measures): χ²(3) = 3000.0, p < 0.001.
+- Fatigue progression: 15.2% baseline → 51.9% at 45 min (exponential accumulation, ρ = 0.99, p < 0.001).
+- Effect sizes (Cohen's d): 1.18 to 2.34 across time bins (very large effects).
+- Significance threshold: α = 0.001 (Bonferroni-corrected for multiple comparisons).
 
-Fatigue-Skill Paradox
+**Fatigue-Skill Paradox**
 
-Direct correlation: ρ = 0.94, p < 0.001 (strong positive)
-Partial correlation (controlling for time): ρ_partial = 0.12, p = 0.74 (not significant)
-Skill progression: Linear improvement (ρ = 0.97, p < 0.001)
-Key finding: Skill improvement does NOT mitigate physiological fatigue—both increase with time
+- Direct correlation: ρ = 0.94, p < 0.001 (strong positive).
+- Partial correlation (controlling for time): ρ_partial = 0.12, p = 0.74 (not significant).
+- Skill progression: Linear improvement (ρ = 0.97, p < 0.001).
+- Key finding: Skill improvement does NOT mitigate physiological fatigue—both increase with time.
 
-Classification Performance Metrics
+**Classification Performance Metrics**
 
-Overall accuracy: 94.2% (n = 13,500 samples from 300 test episodes)
-Per-class F1-scores: Green 0.953, Orange 0.908, Red 0.946
-Weighted average: Precision 0.941, Recall 0.942, F1 0.941
+- Overall accuracy: 94.2% (n = 13,500 samples from 300 test episodes).
+- Per-class F1-scores: Green 0.953, Orange 0.908, Red 0.946.
+- Weighted average: Precision 0.941, Recall 0.942, F1 0.941.
 
-Inter-Sensor Correlations (Spearman ρ)
+**Inter-Sensor Correlations (Spearman ρ)**
 
-HR vs. HRV: ρ = -0.76* (p < 0.001)
-HR vs. GSR: ρ = 0.68* (p < 0.001)
-HRV vs. GSR: ρ = -0.61* (p < 0.001)
-Correlation range: |ρ| = 0.48–0.76 (moderate-to-strong, justifying multimodal fusion)
+- HR vs. HRV: ρ = -0.76* (p < 0.001).
+- HR vs. GSR: ρ = 0.68* (p < 0.001).
+- HRV vs. GSR: ρ = -0.61* (p < 0.001).
+- Correlation range: |ρ| = 0.48–0.76 (moderate-to-strong, justifying multimodal fusion).
 
-Post-Reallocation Recovery (n = 3,187 events)
+**Post-Reallocation Recovery (n = 3,187 events)**
 
-Heart Rate: -8.3 bpm (Cohen's d = 0.72, p < 0.001)
-HRV RMSSD: +12.1 ms (d = 0.68, p < 0.001)
-GSR: -0.9 µS (d = 0.54, p < 0.001)
-Fatigue state: -11.8% (d = 1.02, p < 0.001)
+- Heart Rate: -8.3 bpm (Cohen's d = 0.72, p < 0.001).
+- HRV RMSSD: +12.1 ms (d = 0.68, p < 0.001).
+- GSR: -0.9 µS (d = 0.54, p < 0.001).
+- Fatigue state: -11.8% (d = 1.02, p < 0.001).
 
-Sensor-Specific Temporal Changes
+**Sensor-Specific Temporal Changes**
 
-HR increase: 72 → 94 bpm (+30.5%, p < 0.001)
-HRV decrease: 58 → 31 ms RMSSD (-46.6%, p < 0.001)
-GSR increase: 2.3 → 4.1 µS (+78.3%, p < 0.001)
-Posture degradation: Shoulder angle 22° → 35° (+59.1%, p < 0.001)
+- HR increase: 72 → 94 bpm (+30.5%, p < 0.001).
+- HRV decrease: 58 → 31 ms RMSSD (-46.6%, p < 0.001).
+- GSR increase: 2.3 → 4.1 µS (+78.3%, p < 0.001).
+- Posture degradation: Shoulder angle 22° → 35° (+59.1%, p < 0.001).
 
 ## Repository Structure
 
